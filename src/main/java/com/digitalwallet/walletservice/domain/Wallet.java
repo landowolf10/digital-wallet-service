@@ -1,11 +1,13 @@
 package com.digitalwallet.walletservice.domain;
 
-public class Wallet {
-    private Customer customer;
-    private float balance;
-    private float currency;
+import java.math.BigDecimal;
 
-    public Wallet(Customer customer, float balance, float currency) {
+public class Wallet {
+    private final Customer customer;
+    private BigDecimal balance;
+    private String currency;
+
+    public Wallet(Customer customer, BigDecimal balance, String currency) {
         this.customer = customer;
         this.balance = balance;
         this.currency = currency;
@@ -15,19 +17,19 @@ public class Wallet {
         return customer;
     }
 
-    public float getBalance() {
+    public BigDecimal getBalance() {
         return balance;
     }
 
-    public float getCurrency() {
+    public String getCurrency() {
         return currency;
     }
 
-    public void setBalance(float balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
-    public void setCurrency(float currency) {
+    public void setCurrency(String currency) {
         this.currency = currency;
     }
 }
