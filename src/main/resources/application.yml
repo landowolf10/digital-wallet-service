@@ -1,0 +1,7 @@
+server:
+  port: 9001
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://lando:LandoWolf10@dw-wallet-service.bvlsqt4.mongodb.net/dw-wallet-service?retryWrites=true&w=majority/
+
